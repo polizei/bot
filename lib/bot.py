@@ -38,6 +38,12 @@ class Bot:
         self.chanfile = Chanfile(self.config.chanfile)
 
     def rehash(self):
+        if self.userfile is not None:
+            self.userfile.save()
+
+        if self.chanfile is not None:
+            self.chanfile.save()
+
         from config import Config
         self.config = Config()
         del Config

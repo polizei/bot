@@ -34,9 +34,10 @@ class IRC:
 
     def process(self, line):
         words, words_eol = tokenize(line)
+        cnt = len(words)
 
         if words[0] == 'PING':
-            if len(words) > 1:
+            if cnt > 1:
                 self.bot.send('PONG %s' % (words_eol[1]))
             else:
                 self.bot.send('PONG')
