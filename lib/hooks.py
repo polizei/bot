@@ -4,6 +4,10 @@
 HOOK_CONNECT            = 'connect'
 HOOK_DISCONNECT         = 'disconnect'
 
+HOOK_MOTD_START         = 'motdstart'
+HOOK_MOTD_MESSAGE       = 'motd'
+HOOK_MOTD_END           = 'motdend'
+
 HOOK_PRIV_MESSAGE		= 'privmsg'
 HOOK_CHAN_MESSAGE		= 'chanmsg'
 
